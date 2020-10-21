@@ -1,0 +1,114 @@
+# Copyright (C) 2020 Sergio Peña
+# This file is distributed under the same license as the Short Links plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Short Links 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/short-links\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-10-20T12:21:22+02:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+"X-Domain: short-links\n"
+
+#. Plugin Name of the plugin
+#: includes/cpt-short-links.php:20
+msgid "Short Links"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://github.com/sergixnet/wp-short-links"
+msgstr ""
+
+#. Description of the plugin
+msgid "Plugin to create shortened url links."
+msgstr ""
+
+#. Author of the plugin
+msgid "Sergio Peña"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://github.com/sergixnet"
+msgstr ""
+
+#: includes/admin-columns.php:23
+msgid "Title"
+msgstr ""
+
+#: includes/admin-columns.php:24
+msgid "URL"
+msgstr ""
+
+#: includes/admin-columns.php:25
+msgid "Target"
+msgstr ""
+
+#: includes/admin-columns.php:26
+#: includes/metaboxes.php:61
+msgid "Hits"
+msgstr ""
+
+#: includes/admin-columns.php:27
+msgid "Date"
+msgstr ""
+
+#: includes/cpt-short-links.php:21
+msgid "Short Link"
+msgstr ""
+
+#: includes/cpt-short-links.php:22
+#: includes/cpt-short-links.php:23
+msgid "Add New Short Link"
+msgstr ""
+
+#: includes/cpt-short-links.php:24
+msgid "Edit Short Link"
+msgstr ""
+
+#: includes/cpt-short-links.php:25
+msgid "New Short Link"
+msgstr ""
+
+#: includes/cpt-short-links.php:26
+msgid "View Short Link"
+msgstr ""
+
+#: includes/cpt-short-links.php:27
+msgid "Search Short Links"
+msgstr ""
+
+#: includes/cpt-short-links.php:28
+msgid "Not found Short Links"
+msgstr ""
+
+#: includes/cpt-short-links.php:29
+msgid "Not found Short Links in trash"
+msgstr ""
+
+#: includes/metaboxes.php:46
+msgid "Slug"
+msgstr ""
+
+#: includes/metaboxes.php:49
+msgid "Add a slug for the short link"
+msgstr ""
+
+#: includes/metaboxes.php:50
+msgid "The short link will be like:"
+msgstr ""
+
+#: includes/metaboxes.php:54
+msgid "Target URL"
+msgstr ""
+
+#: includes/metaboxes.php:57
+msgid "Add the URL to be redirected and shortened"
+msgstr ""
+
+#: includes/metaboxes.php:64
+msgid "How many times this link was visited"
+msgstr ""

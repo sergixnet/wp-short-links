@@ -1,0 +1,5 @@
+{
+  "core": null,
+  "plugins": ["./short-links"],
+  "themes": ["./short-links-theme"]
+}
