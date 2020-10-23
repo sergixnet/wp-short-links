@@ -84,13 +84,15 @@ describe('Short Link redirection', function () {
 		response, statusCode, body, (shortLinks = undefined);
 	});
 
-	it('should make a redirect.', async function () {
+	it('should make a 302 redirect.', async function () {
 		const shortLink = shortLinks[0];
 		const { permalink, target_url } = shortLink;
-		const redirectResponse = await got(permalink);
-		const targetRedirectUrl = redirectResponse.url;
+		const redirectResponse = await got(permalink, {
+			followRedirect: false,
+		});
+		statusCode = redirectResponse.statusCode;
 
-		expect(targetRedirectUrl).to.equal(target_url);
+		expect(statusCode).to.equal(302);
 	});
 
 	it('should increment hits by one.', async function () {
@@ -100,7 +102,7 @@ describe('Short Link redirection', function () {
 		response = await got(ENDPOINT_URL);
 		body = response.body;
 		shortLinks = JSON.parse(body);
-		shortLink = shortLinks.find(element => element.id === id);
+		shortLink = shortLinks.find((element) => element.id === id);
 		const newHits = shortLink.hits;
 		const result = hits + 1;
 		expect(result).to.equal(newHits);

@@ -22,6 +22,7 @@ Ahora ya está disponible el comando `wp-env`.
 Después de haber clonado este repositorio, entrar en la carpeta del proyecto e iniciar el entorno, mediante:
 
 ```bash
+$ git clone https://github.com/sergixnet/wp-short-links.git
 $ cd wp-short-links
 $ wp-env start
 ```
@@ -102,3 +103,45 @@ El usuario puede ordenar la tabla de maneras diferentes, haciendo clic en cada u
 
 
 ## Tests
+
+Se han realizado unos test para probar la REST API, la creación, edición y borrado de enlaces acortados desde el panel de administración de WordPress.
+
+Antes de ejecutar los test es necesario instalar las dependencias de `npm`, dentro de la carpeta raíz del proyecto:
+
+```bash
+$ cd wp-short-links
+$ npm install
+```
+
+Con la instancia de WordPress en marcha se pueden ejecutar los test:
+
+```bash
+$ wp-env start
+$ npm test
+```
+
+Si pasan los test, se podrá ver un resultado similar a este:
+
+```bash
+  User admin
+    ✓ can create a shortlink. (1894ms)
+    ✓ can edit a shortlink. (1807ms)
+    ✓ can delete a shortlink. (1352ms)
+
+  Short Links API
+    ✓ should respond with an array of objects.
+    ✓ id key should be a number.
+    ✓ title key should be a string.
+    ✓ slug key should be a string.
+    ✓ date key should be a string.
+    ✓ permalink key should be a string.
+    ✓ target_url key should be a string.
+    ✓ hits key should be a number.
+
+  Short Link redirection
+    ✓ should make a 302 redirect. (47ms)
+    ✓ should increment hits by one. (499ms)
+
+
+  13 passing (8s)
+  ```
